@@ -1,38 +1,106 @@
-.App {
+input[type=text],input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+button{
+
+display: inline-block;
+outline: 0;
+cursor: pointer;
+border-radius: 8px;
+box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+background: #FFD814;
+border: 1px solid #FCD200;
+font-size: 13px;
+height: 31px;
+padding: 0 11px;
+text-align: center;
+
+min-width: 200px;
+font-weight: 500;
+color: #0F1111;
+:hover{
+    background: #F7CA00;
+    border-color: #F2C200;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+}
+}
+
+.a{
+  font-size: 20px;
+  color: rgb(13, 13, 13);
+  text-decoration: none;
+  position: relative;
+}
+
+.a::after{
+  content: "";
+  background: white;
+	mix-blend-mode: exclusion;
+  width: calc(100% + 20px);
+  height: 0;
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+	transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.a:hover::after{
+	height: calc(100% + 8px)
+}
+
+table {
+  width: 100%;
+  border: 1px solid #EEEEEE;
+}
+
+th {
+  display: flex;
+  width: 100%;
+  background: #907878;
+  padding: 18px 0;
+}
+
+tr {
+  display: flex;
+  width: 100%;
+  padding: 18px 0;
+}
+tr:nth-of-type(odd) {
+  background: #EEEEEE;
+}
+td, .header__item {
+  flex: 1 1 20%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  font-size: clamp(2rem, 100%, 8rem);
+  font-family: sans-serif;
+  color: hsl(98, 21%, 47%);
 }
